@@ -109,4 +109,5 @@ if __name__ == "__main__":
         if argv[1] == "start":
             init_db()
             fill_db()
-            show_db(argv[2])
+            show_db("Clients")
+            show_db("Orders")
