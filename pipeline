@@ -1,0 +1,30 @@
+pipeline {
+    agent any
+    options {
+        timestamps()
+    }
+
+    stages {
+        stage("Начало установки библиотек") {
+            steps {
+                sh 'python3 -m pip install pytest'
+                sh 'python3 -m pip install peewee'
+                echo 'Конец установки библиотек'
+            }
+        }
+
+        stage("Старт Pytest") {
+            steps {
+                sh 'pytest tetspy.py --junitxml=lab2_StyopkaNL.xml'
+                echo 'Pytest готов'
+            }
+        }
+
+        stage("Старт app.py") {
+            steps {
+                sh 'python3 app.py start'
+                echo 'Лабораторная работа запущена'
+            }
+        }
+    }
+}
