@@ -9,6 +9,8 @@ import pytest
 db_name = 'database.db'
 db = SqliteDatabase(db_name)
 
+print("test")
+
 
 class BaseModel(Model):
     class Meta:
