@@ -9,7 +9,7 @@ import pytest
 db_name = 'database.db'
 db = SqliteDatabase(db_name)
 
-print("test123")
+print("test")
 
 
 class BaseModel(Model):
