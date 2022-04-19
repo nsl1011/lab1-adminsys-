@@ -15,7 +15,7 @@ pipeline {
 
         stage("Старт Pytest") {
             steps {
-                sh 'pytest tetspy.py --junitxml=lab2_StyopkaNL.xml'
+                sh 'pytest tetspy.py --junitxml=lab3_StyopkaNL.xml'
                 echo 'Pytest готов'
             }
         }
